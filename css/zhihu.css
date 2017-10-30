@@ -1,0 +1,108 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #555;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    background: #f7fafc;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+a:link,a:visited,a:active {
+    text-decoration: none;
+}
+
+.container {
+    height: 590px;
+    width: 100%;
+}
+
+.logo,.logo h2 {
+    margin-top:50px;
+    font-size: 2rem;
+}
+
+.login-toggle{
+    margin: 10px;
+    font-size: 2rem;
+}
+.login-toggle .active{
+    padding-bottom: 2px;
+    border-bottom: solid 3px #0f88eb; 
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-control{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.form-control[name="username"]{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.form-control[name="password"]{
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.btu-submit {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    line-height: 39px;
+    background: 0 0 #0f88eb;
+    border: 1px solid #96c2e9;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: 0;
+    margin: 10px auto;
+    color: #fff;
+    -webkit-appearance: none;
+}
+
+.btu-download {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    line-height: 39px;
+    background: 0 0 #f7fafc;
+    border: 1px solid #96c2e9;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: 0;
+    margin: 10px auto;
+    color: #5fa6e5;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    position: absolute;
+    left: 50%;
+    margin-left: -290px;
+    top: 90%;
+    z-index: -1;
+}
+.footer a,.footer p,.footer span{
+    color: #aebdc9;
+    font-size: 0.8rem;
+}
