@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -13,46 +14,96 @@ body {
     left: 0;
 }
 
+.color-inherit{
+    color: inherit;
+}
 
-a:link,a:visited,a:active {
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+a:link,
+a:visited,
+a:active {
     text-decoration: none;
 }
 
 .container {
-    height: 590px;
     width: 100%;
+    position: relative;
+    top: 50%;
+    margin-top: -200px;
 }
 
-.logo,.logo h2 {
-    margin-top:50px;
-    font-size: 2rem;
+
+
+.logo {
+    margin: 0;
+}
+
+.logo h2 {
+    margin: 30px 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .login-toggle{
-    margin: 10px;
-    font-size: 2rem;
+    height: 44px;
+    margin-bottom: 10px; 
 }
+
+.login-toggle a{
+    color: inherit;
+    display: inline-block;
+    font-size:  18px;
+    height: 100%;
+    line-height: 35px;
+    opacity: .7;
+    margin:0 18px;
+}
+
+.login-toggle a:hover{
+    opacity: 1;
+    color: #555;
+}
+
 .login-toggle .active{
-    padding-bottom: 2px;
-    border-bottom: solid 3px #0f88eb; 
+    opacity: 1;
+    color: #0f88eb;
+}
+
+#login-toggle-bar{
+    display: inline-block;
+    width: 43px;
+    height: 0.2em;
+    background: #0f88eb;
+    transition: left .15s ease-in;
+    position: relative;
+    top: -12px;
+    left: -38px;
 }
 
 .form-group {
     margin-bottom: 0;
 }
 
-.form-control{
+.form-control {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
 }
 
-.form-control[name="username"]{
+.form-control[name="username"] {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
 
-.form-control[name="password"]{
+.form-control[name="password"] {
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
@@ -95,14 +146,17 @@ a:link,a:visited,a:active {
     height: 100%;
 }
 
-.footer{
+.footer {
     position: absolute;
-    left: 50%;
-    margin-left: -290px;
-    top: 90%;
+    width: 100%;
+    top: 96%;
     z-index: -1;
 }
-.footer a,.footer p,.footer span{
+
+
+.footer a,
+.footer p,
+.footer span {
     color: #aebdc9;
     font-size: 0.8rem;
 }
