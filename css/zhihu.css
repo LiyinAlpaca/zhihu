@@ -1,4 +1,3 @@
-html,
 body {
     height: 100%;
     width: 100%;
@@ -14,29 +13,39 @@ body {
     left: 0;
 }
 
-.color-inherit{
+.color-inherit {
     color: inherit;
 }
 
-.float-left{
+.float-left {
     float: left;
 }
 
-.float-right{
+.float-right {
     float: right;
 }
 
-a:link,
+a,
+a:hover,
+a:focus,
 a:visited,
-a:active {
+a:active,
+a:link {
     text-decoration: none;
+    outline: none;
+}
+
+.color-inherit {
+    color: inherit;
 }
 
 .container {
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 50%;
-    margin-top: -200px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
@@ -52,32 +61,27 @@ a:active {
     line-height: 1;
 }
 
-.login-toggle{
+.login-toggle {
     height: 44px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-.login-toggle a{
+.login-toggle a {
     color: inherit;
     display: inline-block;
-    font-size:  18px;
+    font-size: 18px;
     height: 100%;
     line-height: 35px;
     opacity: .7;
-    margin:0 18px;
+    margin: 0 18px;
 }
 
-.login-toggle a:hover{
-    opacity: 1;
-    color: #555;
-}
-
-.login-toggle .active{
+.login-toggle .active {
     opacity: 1;
     color: #0f88eb;
 }
 
-#login-toggle-bar{
+#login-toggle-bar {
     display: inline-block;
     width: 43px;
     height: 0.2em;
@@ -108,6 +112,14 @@ a:active {
     border-bottom-right-radius: 0.25rem;
 }
 
+
+.btu-submit,
+.btu-submit:hover,
+.btu-submit:focus,
+.btu-submit:visited {
+    color: #fff;
+}
+
 .btu-submit {
     display: inline-block;
     height: 100%;
@@ -119,11 +131,19 @@ a:active {
     cursor: pointer;
     outline: 0;
     margin: 10px auto;
-    color: #fff;
     -webkit-appearance: none;
 }
 
-.btu-download {
+.btu-submit:hover {
+    background: #55abed;
+}
+
+
+
+.btu-download,
+.btu-download:hover,
+.btu-download:focus,
+.btu-download:visited {
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -137,26 +157,52 @@ a:active {
     color: #5fa6e5;
 }
 
+.error-msg {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    padding: 0 8px;
+    line-height: 48px;
+    color: #c33;
+    cursor: text;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: -68px;
+    z-index: -1;
+}
+
+.footer a,
+.footer p,
+.footer span,
+.footer-simple a {
+    color: #aebdc9;
+    font-size: 0.8rem;
+}
+
+.feedback{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 25px;
+    width: 25px;
+}
+
 #canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-
-.footer {
-    position: absolute;
-    width: 100%;
-    top: 96%;
-    z-index: -1;
-}
-
-
-.footer a,
-.footer p,
-.footer span {
-    color: #aebdc9;
-    font-size: 0.8rem;
+    width: 1980px;
+    height: 1080px;
 }

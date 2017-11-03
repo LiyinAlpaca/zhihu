@@ -28,20 +28,23 @@
             </div>
         </div>
         <div id="signUp-page">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" id="signUp-form" role="form">
                 <div class="form-group">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
                         <input type="text" name="username" class="form-control input-lg" required placeholder="用户名">
+                        <label class="error-msg" id="error-msg-username"></label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
-                        <input type="text" name="phonenum" class="form-control input-lg" required placeholder="手机号">
+                        <input type="text" name="phonenum-or-email" class="form-control input-lg" required placeholder="手机号">
+                        <label class="error-msg" id="error-msg-phonenum"></label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
                         <input type="password" name="password" class="form-control input-lg" required placeholder="密码（不少于 6 位）">
+                        <label class="error-msg" id="error-msg-password"></label>
                     </div>
                 </div>
                 <div class="row">
@@ -54,7 +57,7 @@
                 <p>点击注册按钮，即代表你同意<a href="#">《知乎协议》</a></p>
             </div>
             <div>
-                <a href="#" class="hidden-xs">注册机构号</a>
+                <a href="#">注册机构号</a>
                 <div class="row">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
                         <a href="#" class="btu-download">下载知乎App</a>
@@ -63,15 +66,17 @@
             </div>
         </div>
         <div id="signIn-page" style="display: none">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" id="signIn-form" role="form">
                 <div class="form-group">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
-                        <input type="text" name="username" class="form-control input-lg" required placeholder="手机号或邮箱">
+                        <input type="text" name="username" class="form-control input-lg" required placeholder="手机号">
+                        <label class="error-msg" id="error-msg-phnum"></label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-10 col-sm-8 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-2 col-md-offset-4 col-lg-offset-5">
                         <input type="password" name="password" class="form-control input-lg" required placeholder="密码">
+                        <label class="error-msg error-msg-password"></label>
                     </div>
                 </div>
                 <div class="row">
@@ -94,6 +99,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer-simple visible-xs">
+            <a href="#">联系我们</a>
         </div>
     </div>
     <div class="footer hidden-xs">
@@ -127,11 +135,14 @@
         <span class="dot">·</span>
         <img src="img/chengxing_logo.png">
     </div>
+    <a href="#"><img src="img/feedback.png" class="feedback hidden-xs"></a>
     <canvas id="canvas"></canvas>
     <script src="libs/jq-3.2.1/jquery-3.2.1.min.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/login-toggle.js"></script>
-    <script type="text/javascript" src='js/canvas.js'></script>
+    <script src="js/login-toggle.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/login-validate.js"></script>
+    <script src='js/canvas.js'></script>
 </body>
 
 </html>
