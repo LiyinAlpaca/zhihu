@@ -1,21 +1,21 @@
-var signUpToggle = document.getElementById("login-toggle-singUp");
-var signInToggle = document.getElementById("login-toggle-singIn");
-var signUpPage = document.getElementById("signUp-page");
-var signInPage = document.getElementById("signIn-page");
-var bar = document.getElementById("login-toggle-bar");
+var $signUpToggle = $("#login-toggle-signUp");
+var $signInToggle = $("#login-toggle-signIn");
+var $signUpPage = $("#signUp-page");
+var $signInPage = $("#signIn-page");
+var $bar = $("#login-toggle-bar");
 
-signUpToggle.onclick = function() {
-    signUpPage.style.display = 'block';
-    signInPage.style.display = 'none';
-    signUpToggle.className = "active";
-    signInToggle.className = "";
-    bar.style.left = '-38px';
-}
+$signUpToggle.click(function(event){
+    $signUpPage.show();
+    $signInPage.hide();
+    $signUpToggle.addClass('active');
+    $signInToggle.removeClass('active');
+    $bar.css('left', '-38px');
+});
 
-signInToggle.onclick = function() {
-    signUpPage.style.display = 'none';
-    signInPage.style.display = 'block';
-    signUpToggle.className = "";
-    signInToggle.className = "active";
-    bar.style.left = '38px';
-}
+$signInToggle.click(function(event) {
+    $signUpPage.hide();
+    $signInPage.show();
+    $signUpToggle.removeClass('active');
+    $signInToggle.addClass('active');
+    $bar.css('left', '38px');
+});
